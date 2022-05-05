@@ -5,9 +5,9 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Your Collection";
-const description = "Remember to replace this description";
-const baseUri = "ipfs://NewUriToReplace";
+const namePrefix = "Saita Cards";
+const description = "Saita Cards";
+const baseUri = "ipfs://Qmc617BZEpwpDPZJFpHPoaS38Y7DSMijMdDcjH9GkJ6RbQ";
 
 const solanaMetadata = {
   symbol: "YC",
@@ -24,20 +24,39 @@ const solanaMetadata = {
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5,
+    growEditionSizeTo: 4000,
     layersOrder: [
-      { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "Bronze" },
+      
+    ],
+  },
+  {
+    growEditionSizeTo: 7000,
+    layersOrder: [
+      { name: "Silver" },
+    ],
+  },
+  {
+    growEditionSizeTo: 8500,
+    layersOrder: [
+      { name: "Gold" },
+    ],
+  },
+  {
+    growEditionSizeTo: 9500,
+    layersOrder: [
+      { name: "Platinum" },
+    ],
+  },
+  {
+    growEditionSizeTo: 10000,
+    layersOrder: [
+      { name: "Diamond" },
     ],
   },
 ];
 
-const shuffleLayerConfigurations = false;
+const shuffleLayerConfigurations = true;
 
 const debugLogs = false;
 
@@ -72,7 +91,7 @@ const pixelFormat = {
 };
 
 const background = {
-  generate: true,
+  generate: false,
   brightness: "80%",
   static: false,
   default: "#000000",
